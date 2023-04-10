@@ -1,0 +1,27 @@
+name: EogendChatCommands
+version: 1.0.0
+author: LavaPower
+main: fr.lavapower.eogendchatcommands.EogendChatCommands
+api-version: 1.19
+prefix: EogendChatCommands
+
+commands:
+  reloadchatcommands:
+    usage: /<command>
+    aliases:
+      - reloadchatc
+      - reloadcc
+    description: Reload les chat commands du plugin
+    permission: EogendChatCommands.Reload
+
+
+permissions:
+  EogendChatCommands.*:
+    default: op
+    description: Permission pour toutes les commandes d'EogendChatCommands
+    children:
+      EogendChatCommands.Reload: true
+
+  EogendChatCommands.Reload:
+    default: op
+    description: Permission pour la commande ReloadChatCommands

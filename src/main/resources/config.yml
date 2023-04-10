@@ -1,0 +1,10 @@
+vide:
+  chat: "Ouvre toi !"
+  location:
+    world: mapeau_surface
+    x: 275
+    y: 47
+    z: -87
+    radius: 5
+  commands:
+    - "msg LavaPowerMC test"
