@@ -3,6 +3,7 @@ package fr.lavapower.eogendchatcommands;
 import fr.lavapower.eogendchatcommands.command.ReloadChatCommands;
 import fr.lavapower.eogendchatcommands.listener.CCListener;
 import fr.lavapower.eogendchatcommands.manager.CCManager;
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.command.TabCompleter;
@@ -20,6 +21,8 @@ public class EogendChatCommands extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new CCListener(this), this);
 
         ccManager = new CCManager(this, getConfig());
+
+        Bukkit.getScheduler().runTaskLater(this, this::reload, 40);
     }
 
     public void reload() {
